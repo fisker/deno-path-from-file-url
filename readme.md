@@ -59,4 +59,4 @@ assert.equal(fromFileUrl('file://localhost/home/foo'), String.raw`\home\foo`)
 
 ## Motivation
 
-Prettier need this functionality, can't use [`node:url`.`fileURLToPath()`](https://nodejs.org/api/url.html#urlfileurltopathurl-options), can't install `@std/path` either since Prettier supports install from GitHub and not all NPM clients support `jsr:` protocol.
+Prettier need this functionality, can't use [`node:url`.`fileURLToPath()`](https://nodejs.org/api/url.html#urlfileurltopathurl-options) since it runs in both Node.js and browsers, can't install `@std/path` either since Prettier supports install from GitHub and not all NPM clients support `jsr:` protocol.
