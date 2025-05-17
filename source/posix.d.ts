@@ -3,10 +3,10 @@ Converts a file URL to a path string.
 
 @example Usage
 ```ts
-import assert from "node:assert";
-import fromFileUrl from "deno-path-from-file-url/posix";
+import assert from "node:assert"
+import fromFileUrl from "deno-path-from-file-url/posix"
 
-assert.equal(fromFileUrl("file:///home/foo"), "/home/foo");
+assert.equal(fromFileUrl("file:///home/foo"), "/home/foo")
 ```
 
 @param url The file URL to convert.

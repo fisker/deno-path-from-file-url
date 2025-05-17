@@ -24,13 +24,17 @@ yarn add deno-path-from-file-url
 ## Usage
 
 ```js
+import process from 'node:process'
 import assert from 'node:assert'
 import fromFileUrl from 'deno-path-from-file-url'
 
-assert.equal(fromFileUrl('file:///home/foo'), '\\home\\foo')
-assert.equal(fromFileUrl('file:///C:/Users/foo'), 'C:\\Users\\foo')
-assert.equal(fromFileUrl('file://localhost/home/foo'), '\\home\\foo')
-assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
+if (process.platform === 'win32') {
+  assert.equal(fromFileUrl('file:///home/foo'), String.raw`\home\foo`)
+  assert.equal(fromFileUrl('file:///C:/Users/foo'), String.raw`C:\Users\foo`)
+  assert.equal(fromFileUrl('file://localhost/home/foo'), String.raw`\home\foo`)
+} else {
+  assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
+}
 ```
 
 For POSIX-specific functions:
@@ -48,7 +52,9 @@ For Windows-specific functions:
 import assert from 'node:assert'
 import fromFileUrl from 'deno-path-from-file-url/windows'
 
-assert.equal(fromFileUrl('file:///home/foo'), '\\home\\foo')
+assert.equal(fromFileUrl('file:///home/foo'), String.raw`\home\foo`)
+assert.equal(fromFileUrl('file:///C:/Users/foo'), String.raw`C:\Users\foo`)
+assert.equal(fromFileUrl('file://localhost/home/foo'), String.raw`\home\foo`)
 ```
 
 ## Motivation
