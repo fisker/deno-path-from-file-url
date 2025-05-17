@@ -31,3 +31,6 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .yarn
 
 # project glob
+index.js
+posix.js
+windows.js

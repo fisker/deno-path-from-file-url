@@ -24,31 +24,31 @@ yarn add deno-path-from-file-url
 ## Usage
 
 ```js
-import assert from "node:assert";
-import fromFileUrl from "deno-path-from-file-url";
+import assert from 'node:assert'
+import fromFileUrl from 'deno-path-from-file-url'
 
-assert.equal(fromFileUrl("file:///home/foo"), "\\home\\foo");
-assert.equal(fromFileUrl("file:///C:/Users/foo"), "C:\\Users\\foo");
-assert.equal(fromFileUrl("file://localhost/home/foo"), "\\home\\foo");
-assert.equal(fromFileUrl("file:///home/foo"), "/home/foo");
+assert.equal(fromFileUrl('file:///home/foo'), '\\home\\foo')
+assert.equal(fromFileUrl('file:///C:/Users/foo'), 'C:\\Users\\foo')
+assert.equal(fromFileUrl('file://localhost/home/foo'), '\\home\\foo')
+assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
 ```
 
 For POSIX-specific functions:
 
 ```js
-import assert from "node:assert";
-import fromFileUrl from "deno-path-from-file-url/posix";
+import assert from 'node:assert'
+import fromFileUrl from 'deno-path-from-file-url/posix'
 
-assert.equal(fromFileUrl("file:///home/foo"), "/home/foo");
+assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
 ```
 
 For Windows-specific functions:
 
 ```js
-import assert from "node:assert";
-import fromFileUrl from "deno-path-from-file-url/windows";
+import assert from 'node:assert'
+import fromFileUrl from 'deno-path-from-file-url/windows'
 
-assert.equal(fromFileUrl("file:///home/foo"), "\\home\\foo");
+assert.equal(fromFileUrl('file:///home/foo'), '\\home\\foo')
 ```
 
 ## Motivation

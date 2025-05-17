@@ -1,1 +1,1 @@
-export { fromFileUrl as default } from '@std/path/from-file-url';
+export {fromFileUrl as default} from '@std/path/from-file-url'

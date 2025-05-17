@@ -57,10 +57,7 @@
     "lint:package-json": "yarn run fix:package-json --check",
     "lint:prettier": "prettier . --check",
     "prepare": "husky install",
-    "release": "run -p fix build fix dist"
-  },
-  "dependencies": {
-    "release-it": "19.0.2"
+    "release": "run -p fix build dist"
   },
   "devDependencies": {
     "@fisker/eslint-config": "14.0.0",
@@ -76,6 +73,7 @@
     "markdownlint-cli2": "0.18.1",
     "npm-run-all2": "8.0.2",
     "prettier": "3.5.3",
+    "release-it": "19.0.2",
     "sort-package-json": "3.2.1"
   },
   "packageManager": "yarn@4.9.1",

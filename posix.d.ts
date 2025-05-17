@@ -12,6 +12,6 @@ assert.equal(fromFileUrl("file:///home/foo"), "/home/foo");
 @param url The file URL to convert.
 @returns The path string.
 */
-declare const fromFileUrl: (url: string | URL) => string;
+declare const fromFileUrl: (url: string | URL) => string
 
-export default fromFileUrl;
+export default fromFileUrl
