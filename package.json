@@ -63,7 +63,9 @@
   },
   "c8": {
     "include": [
-      "index.js"
+      "index.js",
+      "windows.js",
+      "posix.js"
     ],
     "reporter": [
       "lcov",
