@@ -12,6 +12,11 @@ test('fromFileUrl()', () => {
   } else {
     assert.equal(fromFileUrl(new URL('file:///home/foo')), '/home/foo')
   }
+  assert.throws(
+    () => fromFileUrl('abcd://localhost/foo'),
+    TypeError,
+    'URL must be a file URL: received "abcd:"',
+  )
 })
 
 test('posixFromFileUrl()', () => {
