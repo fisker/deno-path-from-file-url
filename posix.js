@@ -7,14 +7,10 @@ function assertArg(url) {
   return url;
 }
 
-// node_modules/@std/path/windows/from_file_url.js
+// node_modules/@std/path/posix/from_file_url.js
 function fromFileUrl(url) {
   url = assertArg(url);
-  let path = decodeURIComponent(url.pathname.replace(/\//g, "\\").replace(/%(?![0-9A-Fa-f]{2})/g, "%25")).replace(/^\\*([A-Za-z]:)(\\|$)/, "$1\\");
-  if (url.hostname !== "") {
-    path = `\\\\${url.hostname}${path}`;
-  }
-  return path;
+  return decodeURIComponent(url.pathname.replace(/%(?![0-9A-Fa-f]{2})/g, "%25"));
 }
 export {
   fromFileUrl as default
