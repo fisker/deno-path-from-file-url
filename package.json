@@ -59,7 +59,7 @@
     "prepare": "husky install",
     "release": "run -p fix build dist",
     "test": "node --test test.js",
-    "test-coverage": "c8 node --run test"
+    "test-coverage": "c8 yarn test"
   },
   "c8": {
     "include": [
