@@ -40,15 +40,6 @@
     "posix.js",
     "posix.d.ts"
   ],
-  "c8": {
-    "include": [
-      "index.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ]
-  },
   "scripts": {
     "build": "node scripts/build.js",
     "clean": "run-p \"clean:*\"",
@@ -69,6 +60,15 @@
     "release": "run -p fix build dist",
     "test": "node --test test.js",
     "test-coverage": "c8 node --run test"
+  },
+  "c8": {
+    "include": [
+      "index.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
   },
   "devDependencies": {
     "@fisker/eslint-config": "14.0.0",
