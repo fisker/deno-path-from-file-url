@@ -25,7 +25,7 @@ yarn add deno-path-from-file-url
 
 ```js
 import process from 'node:process'
-import assert from 'node:assert'
+import assert from 'node:assert/strict'
 import fromFileUrl from 'deno-path-from-file-url'
 
 if (process.platform === 'win32') {
@@ -40,7 +40,7 @@ if (process.platform === 'win32') {
 For POSIX-specific functions:
 
 ```js
-import assert from 'node:assert'
+import assert from 'node:assert/strict'
 import fromFileUrl from 'deno-path-from-file-url/posix'
 
 assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
@@ -49,7 +49,7 @@ assert.equal(fromFileUrl('file:///home/foo'), '/home/foo')
 For Windows-specific functions:
 
 ```js
-import assert from 'node:assert'
+import assert from 'node:assert/strict'
 import fromFileUrl from 'deno-path-from-file-url/windows'
 
 assert.equal(fromFileUrl('file:///home/foo'), String.raw`\home\foo`)

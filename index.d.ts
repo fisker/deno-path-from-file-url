@@ -4,7 +4,7 @@ Converts a file URL to a path string.
 @example Usage
 ```ts
 import process from 'node:process'
-import assert from "node:assert"
+import assert from "node:assert/strict"
 import fromFileUrl from "deno-path-from-file-url"
 
 if (process.platform === 'win32'){
