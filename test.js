@@ -9,13 +9,17 @@ import windowsFromFileUrl from './windows.js'
 test('fromFileUrl()', () => {
   if (process.platform === 'win32') {
     assert.equal(fromFileUrl('file:///C:'), 'C:\\')
+    assert.equal(
+      fromFileUrl('file://127.0.0.1/foo'),
+      String.raw`\\127.0.0.1\foo`,
+    )
   } else {
     assert.equal(fromFileUrl(new URL('file:///home/foo')), '/home/foo')
   }
   assert.throws(
-    () => fromFileUrl('abcd://localhost/foo'),
+    () => fromFileUrl('http://localhost/foo'),
     TypeError,
-    'URL must be a file URL: received "abcd:"',
+    'URL must be a file URL: received "http:"',
   )
 })
 
