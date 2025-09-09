@@ -1,6 +1,6 @@
 {
   "name": "deno-path-from-file-url",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert file URLs to paths.",
   "homepage": "https://github.com/fisker/deno-path-from-file-url#readme",
   "bugs": {
