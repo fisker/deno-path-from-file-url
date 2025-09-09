@@ -1,5 +1,12 @@
-// node_modules/@std/path/_os.js
-var isWindows = globalThis.Deno?.build.os === "windows" || globalThis.navigator?.platform?.startsWith("Win") || globalThis.process?.platform?.startsWith("win") || false;
+// node_modules/@jsr/std__internal/_os.js
+function checkWindows() {
+  const global = globalThis;
+  const os = global.Deno?.build?.os;
+  return typeof os === "string" ? os === "windows" : global.navigator?.platform?.startsWith("Win") ?? global.process?.platform?.startsWith("win") ?? false;
+}
+
+// node_modules/@jsr/std__internal/os.js
+var isWindows = checkWindows();
 
 // node_modules/@std/path/_common/from_file_url.js
 function assertArg(url) {
