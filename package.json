@@ -81,7 +81,7 @@
     "c8": "11.0.0",
     "del-cli": "7.0.0",
     "esbuild": "0.28.0",
-    "eslint": "10.4.0",
+    "eslint": "9.39.4",
     "lint-staged": "17.0.5",
     "markdownlint-cli2": "0.22.1",
     "npm-run-all2": "9.0.1",
