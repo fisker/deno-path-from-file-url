@@ -1,1 +1,1 @@
-export {fromFileUrl as default} from '@std/path/windows/from-file-url'
+export {fromFileUrl as default} from '@jsr/std__path/windows/from-file-url'
