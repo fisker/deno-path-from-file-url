@@ -72,22 +72,22 @@
     ]
   },
   "devDependencies": {
-    "@fisker/eslint-config": "15.2.0",
-    "@fisker/lint-staged-config": "3.3.5",
-    "@fisker/markdownlint-cli2-config": "0.0.3",
-    "@fisker/prettier-config": "5.2.0",
+    "@fisker/eslint-config": "15.4.0",
+    "@fisker/lint-staged-config": "3.4.0",
+    "@fisker/markdownlint-cli2-config": "0.1.0",
+    "@fisker/prettier-config": "5.3.0",
     "@fisker/release-it-config": "6.0.2",
     "@std/path": "jsr:1.1.4",
     "c8": "11.0.0",
     "del-cli": "7.0.0",
-    "esbuild": "0.27.2",
+    "esbuild": "0.28.0",
     "eslint": "10.4.0",
     "lint-staged": "17.0.5",
-    "markdownlint-cli2": "0.20.0",
+    "markdownlint-cli2": "0.22.1",
     "npm-run-all2": "9.0.1",
-    "prettier": "3.7.4",
+    "prettier": "3.8.3",
     "release-it": "20.0.1",
-    "sort-package-json": "3.6.0"
+    "sort-package-json": "3.6.1"
   },
   "packageManager": "yarn@4.15.0",
   "publishConfig": {
