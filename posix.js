@@ -1,4 +1,4 @@
-// node_modules/@std/path/_common/from_file_url.js
+// node_modules/@jsr/std__path/_common/from_file_url.js
 function assertArg(url) {
   url = url instanceof URL ? url : new URL(url);
   if (url.protocol !== "file:") {
@@ -7,7 +7,7 @@ function assertArg(url) {
   return url;
 }
 
-// node_modules/@std/path/posix/from_file_url.js
+// node_modules/@jsr/std__path/posix/from_file_url.js
 function fromFileUrl(url) {
   url = assertArg(url);
   return decodeURIComponent(url.pathname.replace(/%(?![0-9A-Fa-f]{2})/g, "%25"));
