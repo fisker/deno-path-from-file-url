@@ -58,7 +58,8 @@
     "lint:prettier": "prettier . --check",
     "release": "run-p fix build dist",
     "test": "node --test test.js",
-    "test-coverage": "c8 yarn test"
+    "test-coverage": "c8 yarn test",
+    "update": "yarn up @jsr/std__path && yarn build"
   },
   "c8": {
     "include": [
@@ -77,7 +78,7 @@
     "@fisker/markdownlint-cli2-config": "0.1.0",
     "@fisker/prettier-config": "5.3.0",
     "@fisker/release-it-config": "6.0.2",
-    "@jsr/std__path": "1.1.5",
+    "@jsr/std__path": "1.1.4",
     "c8": "11.0.0",
     "del-cli": "7.0.0",
     "esbuild": "0.28.0",
