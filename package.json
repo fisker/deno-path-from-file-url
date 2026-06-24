@@ -59,7 +59,7 @@
     "release": "run-p fix build dist",
     "test": "node --test test.js",
     "test-coverage": "c8 yarn test",
-    "update": "yarn up @jsr/std__path && yarn build"
+    "update": "yarn build && yarn up @jsr/std__path && yarn build"
   },
   "c8": {
     "include": [
