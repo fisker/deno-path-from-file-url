@@ -58,7 +58,8 @@
     "lint:prettier": "prettier . --check",
     "release": "run-p fix build dist",
     "test": "node --test test.js",
-    "test-coverage": "c8 yarn test"
+    "test-coverage": "c8 yarn test",
+    "update": "yarn up @jsr/std__path && yarn build"
   },
   "c8": {
     "include": [
@@ -72,24 +73,24 @@
     ]
   },
   "devDependencies": {
-    "@fisker/eslint-config": "15.4.0",
-    "@fisker/lint-staged-config": "3.4.0",
+    "@fisker/eslint-config": "16.0.0",
+    "@fisker/lint-staged-config": "4.0.0",
     "@fisker/markdownlint-cli2-config": "0.1.0",
-    "@fisker/prettier-config": "5.3.0",
+    "@fisker/prettier-config": "6.0.0",
     "@fisker/release-it-config": "6.0.2",
     "@jsr/std__path": "1.1.5",
     "c8": "11.0.0",
     "del-cli": "7.0.0",
-    "esbuild": "0.28.0",
-    "eslint": "9.39.4",
-    "lint-staged": "17.0.5",
+    "esbuild": "0.28.1",
+    "eslint": "10.5.0",
+    "lint-staged": "17.0.8",
     "markdownlint-cli2": "0.22.1",
-    "npm-run-all2": "9.0.1",
-    "prettier": "3.8.3",
-    "release-it": "20.0.1",
-    "sort-package-json": "3.6.1"
+    "npm-run-all2": "9.0.2",
+    "prettier": "3.8.4",
+    "release-it": "20.2.0",
+    "sort-package-json": "4.0.0"
   },
-  "packageManager": "yarn@4.15.0",
+  "packageManager": "yarn@4.17.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

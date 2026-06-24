@@ -4,19 +4,19 @@ import packageJson from '../package.json' with {type: 'json'}
 
 const entries = ['index', 'windows', 'posix']
 
-function* getJobs() {
+async function build() {
   const exports = {}
   const files = []
 
   for (const entry of entries) {
-    yield esbuild.build({
+    await esbuild.build({
       entryPoints: [`source/${entry}.js`],
       bundle: true,
       outfile: `${entry}.js`,
       format: 'esm',
     })
 
-    yield fs.cp(
+    await fs.cp(
       new URL(`../source/${entry}.d.ts`, import.meta.url),
       new URL(`../${entry}.d.ts`, import.meta.url),
     )
@@ -31,7 +31,7 @@ function* getJobs() {
 
   exports['./*'] = './*'
 
-  fs.writeFile(
+  await fs.writeFile(
     new URL('../package.json', import.meta.url),
     JSON.stringify(
       {
@@ -45,4 +45,5 @@ function* getJobs() {
   )
 }
 
-await Promise.all(getJobs())
+
+await build()

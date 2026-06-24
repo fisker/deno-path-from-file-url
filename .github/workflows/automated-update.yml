@@ -1,0 +1,24 @@
+name: Update `@std/path`
+
+on:
+  workflow_dispatch:
+  schedule:
+    # “At 00:00 on Friday.” https://crontab.guru/#0_0_*_*_5
+    - cron: "0 0 * * 5"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update:
+    if: github.event_name != 'schedule' || github.repository == 'fisker/deno-path-from-file-url'
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    name: Update `@std/path`
+    uses: fisker/shared-workflows/.github/workflows/scheduled-task.yml@main
+    with:
+      message: |-
+        node --print "'Update \`@std/path\` to v'+require('./package.json').devDependencies['@jsr/std__path']"
