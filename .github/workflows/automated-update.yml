@@ -20,5 +20,10 @@ jobs:
     name: Update `@std/path`
     uses: fisker/shared-workflows/.github/workflows/scheduled-task.yml@main
     with:
+      script: |-
+        yarn
+        yarn build
+        yarn up @jsr/std__path
+        yarn build
       message: |-
         node --print "'Update \`@std/path\` to v'+require('./package.json').devDependencies['@jsr/std__path']"
