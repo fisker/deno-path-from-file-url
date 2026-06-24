@@ -17,11 +17,8 @@ jobs:
       contents: write
       pull-requests: write
       actions: write
-    name: Run update
+    name: Update `@std/path`
     uses: fisker/shared-workflows/.github/workflows/scheduled-task.yml@main
     with:
-      name: Update `@std/path`
-      script: |-
-        yarn up @jsr/std__path
       message: |-
         node --print "'Update \`@std/path\` to v'+require('./package.json').devDependencies['@jsr/std__path']"
