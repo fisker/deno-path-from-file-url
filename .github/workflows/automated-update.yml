@@ -28,4 +28,3 @@ jobs:
         yarn build
       message: |
         node --print "`Update \`@std/path\` to v${require('./package.json').devDependencies['@jsr/std__path']}`"
-
