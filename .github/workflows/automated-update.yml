@@ -12,10 +12,15 @@ concurrency:
 
 jobs:
   update:
-    if: github.event_name != 'schedule' || github.repository == 'fisker/git-hooks-list'
+    if: github.event_name != 'schedule' || github.repository == 'fisker/deno-path-from-file-url'
     permissions:
       contents: write
       pull-requests: write
       actions: write
     name: Run update
     uses: fisker/shared-workflows/.github/workflows/scheduled-task.yml@main
+    with:
+      script: |
+        yarn up @jsr/std__path
+        yarn build
+
