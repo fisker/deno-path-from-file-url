@@ -837,19 +837,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsr/std__internal@npm:^1.0.12":
+"@jsr/std__internal@npm:^1.0.14":
   version: 1.0.14
   resolution: "@jsr/std__internal@npm:1.0.14::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__internal%2F1.0.14.tgz"
   checksum: 10/d05f199dea6041b0dd2752e1db44ee71efa43bea324803219bad7e3cbfda75d353ba65a5f7e54b27313bf9385492a8347fb3e40c5e633bca592e948daec4a5f8
   languageName: node
   linkType: hard
 
-"@jsr/std__path@npm:1.1.4":
-  version: 1.1.4
-  resolution: "@jsr/std__path@npm:1.1.4::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__path%2F1.1.4.tgz"
+"@jsr/std__path@npm:1.1.5":
+  version: 1.1.5
+  resolution: "@jsr/std__path@npm:1.1.5::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__path%2F1.1.5.tgz"
   dependencies:
-    "@jsr/std__internal": "npm:^1.0.12"
-  checksum: 10/c52cfef6ee927fbd5f464a8071ca8ca8468134004038bbdef95b3aa6c3f511e98d76fbbda0ec7685d67ea7fed117d0d791c84143ad760935c8f13569d37567ad
+    "@jsr/std__internal": "npm:^1.0.14"
+  checksum: 10/d6d8d0047a84c8f53f7363a071d0790cad154f0af5fc8e826cbbd586fc34baf23d2f698e037f7a015a59acffa5f84a7ae99dcba2547dacc9ddd3e8dbf2ba34fe
   languageName: node
   linkType: hard
 
@@ -1702,7 +1702,7 @@ __metadata:
     "@fisker/markdownlint-cli2-config": "npm:0.1.0"
     "@fisker/prettier-config": "npm:6.0.0"
     "@fisker/release-it-config": "npm:6.0.2"
-    "@jsr/std__path": "npm:1.1.4"
+    "@jsr/std__path": "npm:1.1.5"
     c8: "npm:11.0.0"
     del-cli: "npm:7.0.0"
     esbuild: "npm:0.28.1"
