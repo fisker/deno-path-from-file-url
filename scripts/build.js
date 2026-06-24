@@ -31,7 +31,7 @@ function* getJobs() {
 
   exports['./*'] = './*'
 
-  fs.writeFile(
+  yield fs.writeFile(
     new URL('../package.json', import.meta.url),
     JSON.stringify(
       {
